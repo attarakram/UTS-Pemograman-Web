@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="./style2.css" />
     <title>Tabel Data Mahasiswa</title>
   </head>
   <body>
@@ -18,18 +18,19 @@
         <nav>
           <ul>
             <a href="index.html">Home</a>
-            <br><br>
+            <br /><br />
             <a href="form.html">Formulir</a>
-            <br><br>
+            <br /><br />
             <a href="table.html">Tabel</a>
-            <br><br>
+            <br /><br />
           </ul>
         </nav>
       </aside>
       <main class="content">
         <p>
-          Berikut disajikan tabel data dari mahasiswa yang sudah mengisi formulir yang disediakan pada web ini.
-          <br><br>
+          Berikut disajikan tabel data dari mahasiswa yang sudah mengisi
+          formulir yang disediakan pada web ini.
+          <br /><br />
         </p>
         <table id="pendaftaranTable">
           <thead>
@@ -104,27 +105,27 @@
           </tbody>
         </table>
         <script>
-            let url = new URLSearchParams(window.location.search);
+          let url = new URLSearchParams(window.location.search);
 
-            if(url.has('form') && url.get('form') == 1){
-                let data = document.getElementById("pendaftaranTable");
-                let row = data.insertRow(8);
-                let cells = [];
+          if (url.has("form") && url.get("form") == 1) {
+            let data = document.getElementById("pendaftaranTable");
+            let row = data.insertRow(6);
+            let cells = [];
 
-                for (let i = 0; i <= 8; i++) {
-                    cells[i] = row.insertCell(i);
-                }
-
-                cells[0].innerHTML = url.get('nama');
-                cells[1].innerHTML = url.get('nim');
-                cells[2].innerHTML = url.get('prodi');
-                cells[3].innerHTML = url.get('email');
-                cells[4].innerHTML = url.get('password');
-                cells[5].innerHTML = url.get('jenisKelamin');
-                cells[6].innerHTML = url.get('tanggalLahir');
-                cells[7].innerHTML = url.get('alamat');
-                cells[8].innerHTML = url.get('film');
+            for (let i = 0; i <= 8; i++) {
+              cells[i] = row.insertCell(i);
             }
+
+            cells[0].innerHTML = url.get("nama");
+            cells[1].innerHTML = url.get("nim");
+            cells[2].innerHTML = url.get("prodi");
+            cells[3].innerHTML = url.get("email");
+            cells[4].innerHTML = url.get("password");
+            cells[5].innerHTML = url.get("jenisKelamin");
+            cells[6].innerHTML = url.get("tanggalLahir");
+            cells[7].innerHTML = url.get("alamat");
+            cells[8].innerHTML = url.get("film");
+          }
         </script>
       </main>
     </div>
