@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style3.css" />
+    <title>Formulir Pendataan</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./logo.png" alt="Logo" />
+      <h1>Formulir Pendataan</h1>
+    </header>
+    <div class="container">
+      <aside class="sidebar">
+        <h3>Menu</h3>
+        <nav>
+          <ul>
+            <a href="index.html">Home</a>
+            <br><br>
+            <a href="form.html">Formulir</a>
+            <br><br>
+            <a href="table.html">Tabel</a>
+            <br><br>
+          </ul>
+        </nav>
+      </aside>
+      <main class="content">
+        <br>
+        <form action="table.html" method="get" id="registrationForm">
+          <input type="hidden" name="form" value="1">
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required /><br />
+          <label for="nim">NIM:</label>
+          <input type="text" id="nim" name="nim" required /><br />
+          <label for="prodi">Program Studi:</label>
+          <input type="text" id="prodi" name="prodi" required /><br />
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required /><br />
+          <label for="password">Password:</label>
+          <input type="text" id="password" name="password" required /><br />
+          <label for="jenisKelamin">Jenis Kelamin:</label>
+          <select id="jenisKelamin" name="jenisKelamin" required>
+            <option value="pria">Laki-laki</option>
+            <option value="wanita">Perempuan</option> </select
+          ><br />
+          <label for="tanggalLahir">Tanggal Lahir:</label>
+          <input
+            type="date"
+            id="tanggalLahir"
+            name="tanggalLahir"
+            required
+          /><br />
+          <label for="alamat">Alamat:</label>
+          <textarea type="text" id="alamat" name="alamat" required></textarea><br />
+          <label for="film">Film:</label>
+          <textarea type="text" id="film" name="film"></textarea><br />
+          
+          
+          <button type="submit">Submit</button>
+        </form>
+        <script>
+            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'table.html';
+        });
+        </script>
+      </main>
+    </div>
+  </body>
+  <footer>
+    <p>&copy; Attar Akram Abdillah 2023</p>
+  </footer>
+</html>
