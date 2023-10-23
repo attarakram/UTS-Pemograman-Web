@@ -59,6 +59,20 @@ input[type=text] {
   text-decoration: underline;
 }
 
+button {
+  padding: 10px 15px;
+  background-color: #d40000;
+  color: #ffffff;
+  border-style: none;
+  border-radius: 5px;
+}
+
+
+button:hover {
+  background-color: #f30000;
+  cursor: pointer;
+}
+
 form label,
 form input,
 form textarea,
